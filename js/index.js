@@ -322,12 +322,13 @@ completed.addEventListener('click', showCompleted);
 // Sortable js for drag and drop
 var el = document.querySelector('.todos');
 var sortable = Sortable.create(el, {
+  animation: 150,
   onEnd: function (evt) {
     const todo = evt.item;
     const value = todo.querySelector('p').textContent;
     let index = todos.findIndex((t) => t.value === value);
     todos.splice(index, 1);
-
+    // console.log(todo.nextSibling);
     if (todo.nextSibling) {
       let index1 = todos.findIndex(
         (t) => t.value === todo.nextSibling.querySelector('p').textContent

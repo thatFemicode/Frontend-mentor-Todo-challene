@@ -220,6 +220,9 @@ const addTodo = (e) => {
       createTodo(e.target.value);
     }
   }
+  if (todoInput.value === '') {
+    alert('Add a Task');
+  }
 };
 todoInput.addEventListener('keyup', addTodo);
 // Submit function

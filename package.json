@@ -1,0 +1,19 @@
+{
+  "name": "f-t",
+  "version": "1.0.0",
+  "description": "![Design preview for the Todo app coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass  scss/main.scss  ./dist/css/style.css -w "
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^5.0.0",
+    "prettier": "2.2.1"
+  },
+  "dependencies": {
+    "gsap": "^3.6.0",
+    "sortablejs": "^1.13.0"
+  }
+}

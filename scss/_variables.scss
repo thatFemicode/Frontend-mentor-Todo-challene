@@ -1,0 +1,25 @@
+$color: (
+  'bg': hsl(235, 21%, 11%),
+  'color': hsl(234, 39%, 85%),
+  'bg-todo': hsl(235, 24%, 19%),
+  'top-img': url(../images/bg-mobile-dark.jpg),
+  'tgl-btn': url(../images/icon-sun.svg),
+  'cross': url(../images/icon-cross.svg),
+  'check': url(../images/icon-check.svg),
+  'desk': url(../images/bg-desktop-dark.jpg),
+  'white': url(../images/bg-desktop-light.jpg)
+    // 'back': rgba(225, 225, 225, 0.35),
+  // 'box': rgba(0, 0, 0, 0.25),
+  // 'text': #c7365f,
+  // 'active': rgba(255, 255, 255, 0.4),
+  // 'btn': rgba(255, 255, 255, 0.6),
+  // 'btn-active': rgba(0, 0, 0, 0.2),
+  // "btn-active": red);,,,,,,,,,,,,,,
+);
+$dark: (
+  'bg': hsl(236, 33%, 92%),
+  'color': hsl(237, 14%, 26%),
+  'bg-todo': hsl(0, 0%, 98%),
+  'top-img': url(../images/bg-mobile-light.jpg),
+  'tgl-btn': url(../images/icon-moon.svg),
+);

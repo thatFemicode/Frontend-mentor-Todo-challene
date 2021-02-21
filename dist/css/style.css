@@ -1,0 +1,251 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  background: #161722;
+  color: #cacde8;
+  transition: 0.5s; }
+
+.top-img {
+  width: 100%;
+  height: 225px;
+  background-size: cover;
+  background-image: url(../images/bg-mobile-dark.jpg); }
+
+.light {
+  background: #e4e5f1;
+  color: #393a4c; }
+  .light .top-img {
+    background-image: url(../images/bg-mobile-light.jpg); }
+  .light #main .type-todo {
+    background: #fafafa; }
+    .light #main .type-todo .todoinput {
+      color: #393a4c; }
+  .light #main .header .tgl-btn {
+    background: url(../images/icon-moon.svg);
+    background-size: cover; }
+  .light #main .todos {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    background: #fff; }
+    .light #main .todos .todo .circle::before {
+      background: #fff; }
+  .light #main .remarks {
+    background: #fff; }
+
+.circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #393a4c;
+  position: relative;
+  cursor: pointer; }
+  .circle::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 93%;
+    height: 93%;
+    background: #25273c;
+    border-radius: 50%; }
+
+.cross {
+  width: 10px;
+  height: 10px;
+  opacity: 0;
+  background-image: url(../images/icon-cross.svg);
+  background-size: cover;
+  cursor: pointer; }
+
+.active {
+  z-index: 99999;
+  position: relative;
+  background-image: linear-gradient(#57ddff, #c058f3); }
+  .active.circle::before {
+    z-index: 99999;
+    content: '';
+    position: absolute;
+    background: transparent;
+    display: grid;
+    place-items: center;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transform: scale(0.5);
+    background-size: cover;
+    background-image: url(../images/icon-check.svg); }
+
+.filterActive {
+  color: #3a7bfd; }
+
+.strikethrough {
+  color: #777a92;
+  text-decoration: line-through; }
+
+#main {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  padding: 25px; }
+  #main .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    letter-spacing: 10px;
+    padding-top: 10px; }
+    #main .header .tgl-btn {
+      background: url(../images/icon-sun.svg);
+      cursor: pointer;
+      width: 30px;
+      height: 30px;
+      background-size: cover; }
+  #main .type-todo {
+    margin-top: 24px;
+    width: 100%;
+    background: #25273c;
+    padding: 10px;
+    height: 55px;
+    display: grid;
+    grid-template-columns: 10% auto;
+    align-items: center;
+    border-radius: 8px; }
+    #main .type-todo .submit {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border: 1px solid #393a4c;
+      position: relative;
+      cursor: pointer; }
+      #main .type-todo .submit::before {
+        z-index: 9999;
+        content: '';
+        position: absolute;
+        display: grid;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        transform: scale(0.5);
+        background-size: cover;
+        opacity: 0;
+        background-image: url(../images/icon-check.svg); }
+      #main .type-todo .submit:hover {
+        background-image: linear-gradient(#57ddff, #c058f3); }
+        #main .type-todo .submit:hover::before {
+          opacity: 1; }
+    #main .type-todo .todoinput {
+      background: transparent;
+      width: 100%;
+      height: 100%;
+      border: none;
+      color: #cacde8;
+      transition: 0.5s;
+      caret-color: #3a7bfd; }
+      #main .type-todo .todoinput:focus {
+        outline: none; }
+  #main .todos {
+    background: #25273c;
+    margin-top: 24px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px; }
+    #main .todos .todo {
+      width: 100%;
+      height: 55px;
+      display: grid;
+      grid-template-columns: 10% auto 10%;
+      align-items: center;
+      padding: 10px;
+      font-weight: 400;
+      border-bottom: 1px solid #4d5066; }
+      #main .todos .todo input[type='checkbox'] {
+        display: none; }
+      #main .todos .todo:hover .circle {
+        background-image: linear-gradient(#57ddff, #c058f3); }
+      #main .todos .todo p {
+        cursor: grab; }
+        #main .todos .todo p:hover {
+          font-weight: bold; }
+      #main .todos .todo:hover .cross {
+        opacity: 2; }
+  #main .remarks {
+    position: relative;
+    background: #25273c;
+    height: 55px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer; }
+    #main .remarks:div:not(.filters):hover {
+      color: #3a7bfd; }
+    #main .remarks .small-size {
+      font-size: 13px;
+      color: #777a92; }
+    #main .remarks div {
+      padding: 0 10px; }
+    #main .remarks p {
+      width: 100%;
+      text-align: center; }
+    #main .remarks .clears {
+      position: relative;
+      z-index: 99999999;
+      padding-left: 20px; }
+    #main .remarks .filters {
+      background: transparent;
+      height: 55px;
+      position: absolute;
+      width: 50%;
+      left: 50%;
+      right: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      border-radius: 8px;
+      color: #4d5066;
+      font-weight: 700; }
+      #main .remarks .filters div:hover {
+        color: #777a92;
+        font-weight: 900; }
+  #main .footer {
+    margin-top: 30px;
+    text-align: center; }
+
+@media screen and (min-width: 800px) {
+  body .top-img {
+    background-image: url(../images/bg-desktop-dark.jpg); }
+  .light .top-img {
+    background-image: url(../images/bg-desktop-light.jpg); }
+  #main {
+    padding-top: 40px; }
+    #main .header,
+    #main .type-todo,
+    #main .todos,
+    #main .remarks {
+      width: 60%;
+      margin-left: auto;
+      margin-right: auto; }
+    #main .type-todo {
+      grid-template-columns: 5% auto; }
+    #main .todos .todo {
+      grid-template-columns: 7% auto 5%; }
+      #main .todos .todo span {
+        text-align: right; }
+    #main .remarks .filters {
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50%;
+      background: transparent; }
+    #main .footer {
+      margin-top: 14px; } }

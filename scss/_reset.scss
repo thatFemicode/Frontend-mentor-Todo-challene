@@ -1,0 +1,12 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    background: map-get($map: $color, $key:bg);
+    color: map-get($map: $color, $key:color);
+    transition: 0.5s;
+}

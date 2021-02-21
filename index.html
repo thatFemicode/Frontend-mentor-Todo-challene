@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./images/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./dist/css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="top-img"></div>
+    <main id="main">
+      <div class="header">
+        <h1>TODO</h1>
+        <div class="tgl-btn"></div>
+      </div>
+      <div class="type-todo">
+        <div class="submit"></div>
+        <input
+          type="text"
+          aria-label="todo-input"
+          name="todo-input"
+          placeholder="Create a new todo"
+          class="todoinput"
+        />
+      </div>
+      <div class="todos"></div>
+      <div class="remarks">
+        <div class="completedcount small-size"></div>
+        <div class="small-size clears">Clear Completed</div>
+        <div class="filters">
+          <div class="filterActive showall">All</div>
+          <div class="activates">Active</div>
+          <div class="completed">Completed</div>
+        </div>
+      </div>
+      <p class="footer small-size">Drag and Drop to Reorder</p>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+    <script src="./js/index.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.13.0/Sortable.min.js"></script> -->
+  </body>
+</html>

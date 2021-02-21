@@ -1,0 +1,48 @@
+@media screen and (min-width: 800px) {
+  body {
+    .top-img {
+      background-image: map-get($map: $color, $key: desk);
+    }
+  }
+  .light {
+    .top-img {
+      background-image: map-get($map: $color, $key: 'white');
+    }
+  }
+  #main {
+    padding-top: 40px;
+    .header,
+    .type-todo,
+    .todos,
+    .remarks {
+      width: 60%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .type-todo {
+      grid-template-columns: 5% auto;
+    }
+    .todos {
+      .todo {
+        grid-template-columns: 7% auto 5%;
+
+        span {
+          text-align: right;
+        }
+      }
+    }
+    .remarks {
+      .filters {
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50%;
+        background: transparent;
+      }
+    }
+    .footer {
+      margin-top: 14px;
+    }
+  }
+}
